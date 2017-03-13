@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="utf-8">
+    <title>Let's Start!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="app" class="section">
+        <div class="row">
+          <div class="col s12">
+            <form>
+              <p>
+                <input id="rock" name="option" type="radio" value="1" v-model="option" />
+                <label for="rock">ROCK</label>
+              </p>
+              <p>
+                <input id="paper" name="option" type="radio" value="2" v-model="option" />
+                <label for="paper">PAPER</label>
+              </p>
+              <p>
+                <input id="scissor" name="option" type="radio" value="3" v-model="option" />
+                <label for="scissor">SCISSOR</label>
+              </p>
+            </form>
+          </div>
+
+          <div class="col s12">
+            <button class="btn waves-effect" v-on:click="displayValues(option)">
+              BEGIN
+            </button>
+          </div>
+          <div class="col s6">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">USER:</span>
+              </div>
+              <div class="card-action">
+                <p>
+                  {{ user }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">COMPUTER:</span>
+              </div>
+              <div class="card-action">
+                <p>
+                  {{ comp }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12">
+            <h1>
+              {{ result }}
+            </h1>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="app.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
+</html>
